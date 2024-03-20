@@ -1,3 +1,3 @@
-var posts=["day-news-2024-3-12-1/","day-news-2024-3-12-2/","how-to-use-chatgpt-prompt/","register-chatgpt-account/","register-claude3-account/","register-midjourney-account/","register-use-wildcard/","register-the-gpt-manually/","search-onlyfans/","subscribe-midjourney/","sora_news/","upgrade-chatgpt-account/","why-use-gpt/","subscribe-onlyfans/","wildcard-questions/"];function toRandomPost(){
+var posts=["day-news-2024-3-12-2/","day-news-2024-3-12-1/","how-to-use-chatgpt-prompt/","register-chatgpt-account/","register-midjourney-account/","register-the-gpt-manually/","register-claude3-account/","search-onlyfans/","register-use-wildcard/","sora_news/","subscribe-midjourney/","upgrade-chatgpt-account/","subscribe-onlyfans/","why-use-gpt/","wildcard-questions/"];function toRandomPost(){
     pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);
   };
