@@ -319,7 +319,7 @@ queueMicrotask(() => {
   const initWaline = () => {
     const waline = Waline.init(Object.assign({
       el: '#waline-wrap',
-      serverURL: 'waline-snowfeng.vercel.app',
+      serverURL: 'comment.snowfeng.com',
       pageview: false,
       dark: 'html[data-theme="dark"]',
       path: window.location.pathname,
@@ -386,7 +386,7 @@ queueMicrotask(() => {
 
   const getComment = async () => {
     try {
-      const res = await fetch('waline-snowfeng.vercel.app/api/comment?type=recent&count=6', { method: 'GET' })
+      const res = await fetch('comment.snowfeng.com/api/comment?type=recent&count=6', { method: 'GET' })
       const result = await res.json()
       const walineArray = result.data.map(e => {
         return {

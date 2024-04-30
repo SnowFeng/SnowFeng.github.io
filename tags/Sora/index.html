@@ -66,7 +66,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2024-04-02 17:56:14',
+  postUpdate: '2024-04-30 11:41:57',
   postMainColor: '',
 }</script><noscript><style type="text/css">
   #nav {
@@ -360,7 +360,7 @@ queueMicrotask(() => {
 
   const getComment = async () => {
     try {
-      const res = await fetch('waline-snowfeng.vercel.app/api/comment?type=recent&count=6', { method: 'GET' })
+      const res = await fetch('comment.snowfeng.com/api/comment?type=recent&count=6', { method: 'GET' })
       const result = await res.json()
       const walineArray = result.data.map(e => {
         return {
