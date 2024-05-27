@@ -295,11 +295,11 @@ queueMicrotask(() => {
   const initWaline = () => {
     const waline = Waline.init(Object.assign({
       el: '#waline-wrap',
-      serverURL: 'comment.snowfeng.com',
+      serverURL: 'https://comment.snowfeng.com',
       pageview: false,
       dark: 'html[data-theme="dark"]',
       path: window.location.pathname,
-      comment: false,
+      comment: true,
     }, null))
   }
 
@@ -362,7 +362,8 @@ queueMicrotask(() => {
 
   const getComment = async () => {
     try {
-      const res = await fetch('comment.snowfeng.com/api/comment?type=recent&count=6', { method: 'GET' })
+      console.log('测试最新评论：https://comment.snowfeng.com/api/comment?type=recent&count=6')
+      const res = await fetch('https://comment.snowfeng.com/api/comment?type=recent&count=6', { method: 'GET' })
       const result = await res.json()
       const walineArray = result.data.map(e => {
         return {
